@@ -12,7 +12,7 @@ M(t,q)\ du = h(t, q, u)\ dt + W_g(t, q)\ dP_g + W_\gamma(t, q)\ dP_\gamma + W_N(
 ```math
 \dot{q}(t, q, u) = B(t, q)\ u + \beta(t, q)
 ```
-*Ideal bilateral constraints*
+*Bilateral constraints*
 ```math
 g(t, q) = 0
 ```
