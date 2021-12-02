@@ -1,6 +1,31 @@
 # nonsmooth_mech_benckmarks
 
-The most general structure of governing equations, which is able to describe any of our benchmarks is given by the following.
+## Table of Contents
+
+- [nonsmooth_mech_benckmarks](#nonsmooth_mech_benckmarks)
+  - [Table of Contents](#table-of-contents)
+  - [Requirements](#requirements)
+  - [Simulate a benchmark](#simulate-a-benchmark)
+  - [Mechanics](#mechanics)
+
+## Requirements
+* Python 3.x (Tested on Python 3.9.9 for macOX)
+* Python packages:
+    * numpy
+    * matplotlib
+    * tqdm (used to include progress bar)
+
+## Simulate a benchmark
+This benchmark collection is organized as follows: 
+The folder `solvers` contains a collection of solvers, which can be used to simulate the benchmarks. The folder `benchmarks` contains a folder for each benchmark examples, e.g. the folder `benchmarks/bouncingball` for the rotating bouncing ball example. Each benchmark folder contains the file defining the benchmark system, e.g. `bouncing_ball_system.py`. The 'system' file defines the class containing all system properties and providing the mass matrix, forces, contact kinematics, etc. as methods.
+Finally the acutal simulation is done by running the 'scenario' files, e.g. `bouncing_ball_scenario1.py`, which sets the initial conditions, calls the solver and plots the results. For instance, a simulation of the bouncing ball can be performed by calling
+```bash
+python benchmarks/bouncing_ball/bouncing_ball_scenario1.py
+```
+
+## Mechanics
+
+The most general structure of governing equations, which is able to describe any of our benchmarks is given by the following. This is also the nomenclature used in the code.
 
 *Kinematic variables*: time $`t`$, gen. coordinates $`q`$, gen. velocitites $`u`$, gen. accelerations $`a`$.
 
